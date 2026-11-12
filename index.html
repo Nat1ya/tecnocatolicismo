@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manifiesto del TecnoCatolicismo</title>
+<meta name="description" content="Manifiesto del TecnoCatolicismo, de Mario Jatiya: la tecnología al servicio de la persona, nunca la persona al servicio de la tecnología. Tres pilares contra el abuso de poder.">
+<meta name="author" content="Mario Jatiya">
+<link rel="canonical" href="https://tecnocatolicismo.org/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfaf6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151412">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="TecnoCatolicismo">
+<meta property="og:title" content="Manifiesto del TecnoCatolicismo">
+<meta property="og:description" content="La tecnología al servicio de la persona, nunca la persona al servicio de la tecnología.">
+<meta property="og:url" content="https://tecnocatolicismo.org/">
+<meta property="og:image" content="https://tecnocatolicismo.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Manifiesto del TecnoCatolicismo. La tecnología al servicio de la persona, nunca la persona al servicio de la tecnología. Mario Jatiya, 11 de noviembre de 2026.">
+<meta property="article:author" content="Mario Jatiya">
+<meta property="article:published_time" content="2026-11-11">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manifiesto del TecnoCatolicismo">
+<meta name="twitter:description" content="La tecnología al servicio de la persona, nunca la persona al servicio de la tecnología.">
+<meta name="twitter:image" content="https://tecnocatolicismo.org/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Manifiesto del TecnoCatolicismo",
+  "description": "La tecnología al servicio de la persona, nunca la persona al servicio de la tecnología.",
+  "author": { "@type": "Person", "name": "Mario Jatiya" },
+  "datePublished": "2026-11-11",
+  "inLanguage": "es",
+  "url": "https://tecnocatolicismo.org/",
+  "image": "https://tecnocatolicismo.org/og.png"
+}
+</script>
+
+<style>
+:root {
+  --papel: #fbfaf6;
+  --superficie: #f3f0e9;
+  --tinta: #1e1c19;
+  --tenue: #6b665e;
+  --linea: #e3ded4;
+  --acento: #8c2f25;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papel: #151412;
+    --superficie: #1d1b18;
+    --tinta: #e9e5dd;
+    --tenue: #a39d92;
+    --linea: #2f2c27;
+    --acento: #dc9584;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", P052, "Book Antiqua", Charter, Georgia, serif;
+  font-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem);
+  line-height: 1.62;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+
+/* Rejilla: columna de lectura centrada con gutter mínimo de 16 px */
+.bloque {
+  display: grid;
+  grid-template-columns: minmax(16px, 1fr) minmax(0, 34em) minmax(16px, 1fr);
+}
+.bloque > * { grid-column: 2; }
+.bloque > .ancho { grid-column: 1 / -1; justify-self: center; width: min(100% - 32px, 46em); }
+
+p, li { text-wrap: pretty; }
+h1, h2 { font-weight: 400; text-wrap: balance; }
+strong { font-weight: 700; }
+cite { font-style: italic; }
+
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: var(--acento);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+a:hover { color: var(--acento); }
+a:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; border-radius: 2px; }
+::selection { background: color-mix(in srgb, var(--acento) 22%, transparent); }
+
+.versalitas {
+  font-variant-caps: all-small-caps;
+  font-variant-numeric: lining-nums;
+  letter-spacing: 0.07em;
+  color: var(--tenue);
+}
+
+/* Cabecera */
+.cabecera { padding-top: clamp(3.5rem, 11vw, 8rem); }
+.marca { width: 2.25rem; height: 2.25rem; color: var(--acento); margin-bottom: 2rem; }
+h1 {
+  font-size: clamp(2.5rem, 1.6rem + 4.2vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.022em;
+  margin: 0;
+}
+.autor { margin: 1.5rem 0 0; font-size: 1.2em; font-style: italic; }
+.datos { margin: 0.35rem 0 0; font-size: 0.95em; }
+.datos time { white-space: nowrap; }
+.lema {
+  font-size: clamp(1.4rem, 1.15rem + 1.1vw, 1.95rem);
+  font-style: italic;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin: clamp(2.5rem, 7vw, 4rem) 0 0;
+  padding-top: clamp(2rem, 5vw, 2.75rem);
+  border-top: 1px solid var(--linea);
+}
+.entradilla { margin: 1.25rem 0 0; color: var(--tenue); }
+
+/* Índice */
+.indice { margin-top: clamp(3rem, 8vw, 5rem); }
+.indice h2 { font-size: 1em; margin: 0 0 0.75rem; }
+.indice ol { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--linea); }
+.indice li { border-bottom: 1px solid var(--linea); }
+.indice a { display: block; padding: 0.6rem 0; text-decoration: none; }
+.indice a:hover { color: var(--acento); }
+@media (min-width: 46em) {
+  .indice ol { columns: 2; column-gap: 2.5rem; border-top: 0; }
+  .indice li { break-inside: avoid; }
+}
+
+/* Secciones */
+section { margin-top: clamp(4rem, 10vw, 6.5rem); scroll-margin-top: 1.5rem; }
+section > h2 {
+  font-size: clamp(1.65rem, 1.3rem + 1.5vw, 2.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0 0 1.5rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--linea);
+}
+.pilar-num {
+  display: block;
+  font-size: 0.5em;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.09em;
+  color: var(--acento);
+  margin-bottom: 0.5rem;
+}
+section p { margin: 0 0 1.15em; }
+.divisa { font-size: 1.12em; line-height: 1.45; }
+
+blockquote {
+  margin: 1.5rem 0 2rem;
+  padding: 0.15rem 0 0.15rem 1.25rem;
+  border-left: 2px solid var(--acento);
+  font-size: 1.12em;
+  font-style: italic;
+}
+blockquote p { margin: 0; }
+.cita-ref { font-style: normal; color: var(--tenue); white-space: nowrap; }
+
+/* Listas de compromisos */
+.compromisos { list-style: none; counter-reset: n; margin: 2rem 0 2.25rem; padding: 0; }
+.compromisos > li {
+  counter-increment: n;
+  position: relative;
+  padding-left: 2.1em;
+  margin-bottom: 1.1em;
+}
+.compromisos > li::before {
+  content: counter(n);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  color: var(--acento);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.lista-simple { margin: 1.5rem 0; padding-left: 1.2em; }
+.lista-simple > li { margin-bottom: 0.9em; padding-left: 0.3em; }
+.lista-simple > li::marker { color: var(--acento); }
+
+/* Tabla de los tres pilares */
+.pilares { border-collapse: collapse; font-size: 0.88em; line-height: 1.45; margin: 1.5rem 0 0.5rem; }
+.pilares th, .pilares td { text-align: left; vertical-align: top; padding: 0.9rem 1.1rem 0.9rem 0; border-bottom: 1px solid var(--linea); }
+.pilares th:last-child, .pilares td:last-child { padding-right: 0; }
+.pilares thead th {
+  font-weight: 400;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.07em;
+  color: var(--tenue);
+  border-bottom-color: var(--tinta);
+  padding-top: 0;
+}
+.pilares td:nth-child(2) { font-weight: 700; }
+@media (max-width: 40em) {
+  .pilares thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .pilares, .pilares tbody, .pilares tr, .pilares td { display: block; }
+  .pilares { border-top: 1px solid var(--tinta); }
+  .pilares tr { display: flex; flex-direction: column; padding: 1.25rem 0; border-bottom: 1px solid var(--linea); }
+  .pilares td { border: 0; padding: 0 0 0.6rem; }
+  .pilares td:last-child { padding-bottom: 0; }
+  .pilares td::before {
+    content: attr(data-label);
+    display: block;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.07em;
+    color: var(--tenue);
+    font-size: 0.92em;
+  }
+  .pilares td:nth-child(2) { order: -1; font-size: 1.18em; padding-bottom: 0.75rem; }
+  .pilares td:nth-child(2)::before { content: none; }
+}
+
+/* Firma */
+.datacion { font-style: italic; }
+.firma-nombre {
+  font-size: 1.55em;
+  font-style: italic;
+  margin-top: 2.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--tinta);
+  width: fit-content;
+  min-width: 12rem;
+}
+
+.referencias .lista-simple { font-size: 0.92em; }
+
+/* Pie */
+.pie { margin-top: clamp(4rem, 10vw, 6.5rem); padding-bottom: 3rem; }
+.pie > div { font-size: 0.85em; border-top: 1px solid var(--linea); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; }
+.pie p { margin: 0; }
+
+@media print {
+  :root { --papel: #fff; --superficie: #fff; --tinta: #000; --tenue: #333; --linea: #bbb; --acento: #000; }
+  body { font-size: 11pt; }
+  .indice { display: none; }
+  section { break-inside: auto; margin-top: 2rem; }
+  section > h2 { break-after: avoid; }
+  a { text-decoration: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="cabecera bloque" id="inicio">
+  <svg class="marca" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 12Q32 17 54 12L54 24Q38 20 35 21Q35.5 44 39 54L25 54Q28.5 44 29 21Q26 20 10 24Z"/></svg>
+  <h1>Manifiesto del TecnoCatolicismo</h1>
+  <p class="autor">Mario Jatiya</p>
+  <p class="datos versalitas"><time datetime="2026-11-11">11 de noviembre de 2026</time></p>
+  <p class="lema">La tecnología al servicio de la persona, nunca la persona al servicio de la tecnología.</p>
+  <p class="entradilla">Este manifiesto propone tres compromisos para que la inteligencia artificial, el blockchain, la robótica y la tecnología en general sirvan al bien común, con los valores cristianos como brújula.</p>
+</header>
+
+<nav class="indice bloque" aria-labelledby="indice-titulo">
+  <h2 id="indice-titulo" class="versalitas">Índice</h2>
+  <ol>
+    <li><a href="#por-que-ahora">Por qué ahora</a></li>
+    <li><a href="#principio-rector">El principio rector</a></li>
+    <li><a href="#pilar-1">Pilar I. Un poder sin sombras</a></li>
+    <li><a href="#pilar-2">Pilar II. Suelo garantizado, techo libre</a></li>
+    <li><a href="#pilar-3">Pilar III. Nadie está en venta</a></li>
+    <li><a href="#lo-que-no-es">Lo que no es el TecnoCatolicismo</a></li>
+    <li><a href="#primeros-pasos">Primeros pasos</a></li>
+    <li><a href="#firma">Firma</a></li>
+    <li><a href="#referencias">Referencias</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<section class="bloque" id="por-que-ahora">
+  <h2>Por qué ahora</h2>
+  <p>Estamos ante una nueva revolución industrial. En 1891, León XIII respondió a la primera con la <cite>Rerum Novarum</cite>. En 2025, León XIV eligió su nombre en recuerdo de aquel papa, para ofrecer la doctrina social de la Iglesia ante la llegada de la inteligencia artificial.</p>
+  <p>La tecnología de hoy puede repartir como nunca o concentrar como nunca. Puede hacer transparente el poder o esconderlo en un código que nadie ve. Puede liberar del trabajo penoso o dejar sin sustento a quien no tenga sitio en la nueva economía.</p>
+  <p>La técnica no decide hacia dónde va: lo decide quien la diseña y para qué. El TecnoCatolicismo propone ponerla al servicio de la dignidad de la persona y del bien común. No es una propuesta contra la técnica, sino sobre su sentido.</p>
+</section>
+
+<section class="bloque" id="principio-rector">
+  <h2>El principio rector</h2>
+  <p>Una sola regla ordena todo lo demás: <strong>contra el abuso de poder, a favor de la persona.</strong></p>
+  <p>Este manifiesto no señala a ningún grupo de personas como enemigo. Se opone a tres abusos concretos, y a cada uno le corresponde un pilar. Sus valores vienen de la Doctrina Social de la Iglesia.</p>
+  <table class="pilares ancho">
+    <thead>
+      <tr>
+        <th scope="col">Abuso que combate</th>
+        <th scope="col">Pilar</th>
+        <th scope="col">Lema</th>
+        <th scope="col">Valor en que se apoya</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Abuso que combate">El poder que se oculta o se excede</td>
+        <td data-label="Pilar">I. Un poder sin sombras</td>
+        <td data-label="Lema">Transparencia total del poder; decisión siempre humana</td>
+        <td data-label="Valor en que se apoya">Verdad y subsidiariedad</td>
+      </tr>
+      <tr>
+        <td data-label="Abuso que combate">La riqueza que no se reparte</td>
+        <td data-label="Pilar">II. Suelo garantizado, techo libre</td>
+        <td data-label="Lema">Que las máquinas den de comer a quien no puede trabajar</td>
+        <td data-label="Valor en que se apoya">Destino universal de los bienes y dignidad del trabajo</td>
+      </tr>
+      <tr>
+        <td data-label="Abuso que combate">El negocio de explotar a quien es más débil</td>
+        <td data-label="Pilar">III. Nadie está en venta</td>
+        <td data-label="Lema">Contra quien explota, nunca contra quien sufre la explotación</td>
+        <td data-label="Valor en que se apoya">Dignidad de la persona y solidaridad</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="bloque" id="pilar-1">
+  <h2><span class="pilar-num">Pilar I.</span> Un poder sin sombras</h2>
+  <p class="divisa"><strong>Transparencia total del poder; decisión siempre humana.</strong></p>
+  <blockquote><p>«Nada hay oculto que no llegue a descubrirse» <span class="cita-ref">(Lc 8,17).</span></p></blockquote>
+  <p>Ningún poder debe estar por encima del pueblo ni esconderle lo que hace en su nombre. La tecnología permite hoy algo que nunca fue posible: que cada decisión pública y cada euro común queden a la vista de cualquiera.</p>
+  <p>Pero automatizar el Estado no elimina el poder: lo esconde en el código. Quien programa el sistema gobierna sin haber pasado por las urnas. Por eso <cite>Antiqua et Nova</cite> (2025) recuerda que la responsabilidad moral no se delega en una máquina.</p>
+  <p>Lo mismo vale para el fisco. Pagar impuestos es un deber de justicia con el bien común (Catecismo, n.º 2240), pero el Estado no puede convertir ese deber en una trampa ni en un negocio.</p>
+  <ol class="compromisos" role="list">
+    <li><strong>Cuentas públicas en registro abierto.</strong> Cada euro público, cada contrato y cada subvención, inscritos en un registro que nadie pueda alterar después y que cualquier persona pueda consultar.</li>
+    <li><strong>Algoritmos públicos a la vista.</strong> Todo sistema automático que use la administración para decidir sobre una persona se publica, se explica y se puede auditar.</li>
+    <li><strong>Una firma humana en cada decisión.</strong> La máquina calcula y propone; decide una persona con nombre, cargo y responsabilidad, a quien se pueden pedir cuentas.</li>
+    <li><strong>Auditoría ciudadana.</strong> Cualquier persona puede comprobar quién introdujo cada dato y cuándo. Un registro inalterable garantiza que nada cambia después, no que fuera verdad al entrar.</li>
+    <li><strong>Un fisco automático y sin trampas.</strong> La administración ya tiene los datos: calcula los impuestos, propone la cuenta hecha y la persona solo la revisa y la acepta.</li>
+    <li><strong>Fin de la persecución fiscal abusiva.</strong> Ningún sueldo de quien inspecciona depende de lo que sanciona. Un error de buena fe se corrige sin castigo; la sanción queda para el fraude.</li>
+  </ol>
+</section>
+
+<section class="bloque" id="pilar-2">
+  <h2><span class="pilar-num">Pilar II.</span> Suelo garantizado, techo libre</h2>
+  <p class="divisa"><strong>Que las máquinas den de comer a quien no puede trabajar, sin castigar a quien se esfuerza.</strong></p>
+  <blockquote><p>«Tuve hambre y me disteis de comer» <span class="cita-ref">(Mt 25,35).</span></p></blockquote>
+  <p>La automatización producirá más riqueza con menos trabajo humano. Si esa riqueza se queda en pocas manos, la robótica dejará sin sustento a quien no encuentre sitio en la nueva economía.</p>
+  <p>La doctrina católica sostiene dos verdades a la vez. Por el destino universal de los bienes, lo que producen las máquinas debe llegar a todo el mundo. Por la dignidad del trabajo (<cite>Laborem Exercens</cite>, 1981), trabajar no es solo ganar dinero: es una forma de realizarse y de servir.</p>
+  <ol class="compromisos" role="list">
+    <li><strong>Un suelo que nadie pierde.</strong> Alimento y techo básicos garantizados para quien no puede trabajar o no encuentra trabajo, financiados con el rendimiento de la automatización.</li>
+    <li><strong>Cada esfuerzo suma.</strong> Ninguna ayuda se pierde por empezar a trabajar: trabajar siempre deja más que no hacerlo.</li>
+    <li><strong>Un techo que nadie impone.</strong> Quien aspira a una vida mejor y se esfuerza por ella conserva el fruto de su trabajo. El suelo protege; no iguala por abajo ni frena a nadie.</li>
+    <li><strong>Robots donde más falta hacen.</strong> La robótica se orienta primero a producir alimentos, cuidar a personas mayores o dependientes y asumir los trabajos peligrosos.</li>
+    <li><strong>Impuestos bajos al trabajo.</strong> La carga fiscal sobre quien trabaja baja, para que el esfuerzo rinda a quien lo hace y no al fisco.</li>
+    <li><strong>Que contribuya también la automatización.</strong> Los sistemas automatizados que sustituyen trabajo humano aportan su parte al bien común, y esa aportación financia el suelo garantizado.</li>
+  </ol>
+</section>
+
+<section class="bloque" id="pilar-3">
+  <h2><span class="pilar-num">Pilar III.</span> Nadie está en venta</h2>
+  <p class="divisa"><strong>Contra quien explota, nunca contra quien sufre la explotación.</strong></p>
+  <p>Hay economías enteras que dependen de mano de obra barata y precaria. Ese modelo alimenta la inmigración ilegal, la trata y la precariedad, porque alguien se lucra con que siempre haya personas dispuestas a trabajar en cualquier condición.</p>
+  <p>La tecnología puede cortar ese negocio de raíz, y el TecnoCatolicismo existe para darle prioridad. Si las máquinas hacen los trabajos más duros y peor pagados, nadie gana nada explotando a otra persona para hacerlos. Ninguna economía debe depender de que haya personas en precario.</p>
+  <p>Este pilar no se dirige contra ninguna persona migrante. La Iglesia reconoce el derecho de cada Estado a regular la inmigración y, a la vez, el deber de acoger a quien llega (Catecismo, n.º 2241).</p>
+  <ol class="compromisos" role="list">
+    <li><strong>Priorizar la automatización de los trabajos que sostienen la explotación.</strong> La inversión pública y privada en tecnología va primero a las tareas duras, peligrosas o precarias en que más se abusa de las personas.</li>
+    <li><strong>Una economía que no dependa de mano de obra barata.</strong> Ningún sector debe necesitar personas en precario para ser rentable.</li>
+    <li><strong>Nadie se queda atrás.</strong> Quien deja esos trabajos pasa al suelo garantizado del Pilar II y a la formación para aspirar a algo mejor.</li>
+    <li><strong>Perseguir a quien se lucra.</strong> Las mafias y quienes explotan responden ante la ley; quien sufre la explotación recibe protección.</li>
+  </ol>
+  <p>Patrona de este pilar: santa Josefina Bakhita, esclava liberada. Su fiesta, el 8 de febrero, es la Jornada Mundial de Oración y Reflexión contra la Trata de Personas.</p>
+</section>
+
+<section class="bloque" id="lo-que-no-es">
+  <h2>Lo que no es el TecnoCatolicismo</h2>
+  <ul class="lista-simple">
+    <li><strong>No es una organización de la Iglesia.</strong> Es una corriente de pensamiento inspirada en su doctrina social, y no habla en su nombre.</li>
+    <li><strong>No es un partido confesional.</strong> No pide un Estado que imponga la fe: propone valores que cualquier persona de buena voluntad puede compartir, creyente o no.</li>
+    <li><strong>No es una tecnocracia.</strong> Las máquinas no gobiernan: sirven a quien gobierna y a quien vigila a quien gobierna.</li>
+    <li><strong>No está contra la tecnología.</strong> Está contra la tecnología sin sentido y sin responsable.</li>
+    <li><strong>No tiene enemigos entre las personas.</strong> Ni por su origen, ni por su fe, ni por sus ideas: solo se opone al abuso.</li>
+  </ul>
+</section>
+
+<section class="bloque" id="primeros-pasos">
+  <h2>Primeros pasos</h2>
+  <p>Un manifiesto vale lo que valen sus hechos. Quien firma este texto se compromete a:</p>
+  <ol class="compromisos" role="list">
+    <li><strong>Publicarlo</strong> firmado y fechado, en un lugar público y archivado.</li>
+    <li><strong>Aplicarlo primero en casa</strong>, en sus propios proyectos tecnológicos: precios claros, ninguna trampa y los datos en manos de cada persona.</li>
+    <li><strong>Proponer la adhesión</strong> de proyectos y empresas afines al <cite lang="en">Rome Call for AI Ethics</cite> (2020), el compromiso ético sobre IA promovido por la Academia Pontificia para la Vida.</li>
+    <li><strong>Lanzar la primera acción pública contra la trata</strong> el 8 de febrero de 2027, fiesta de santa Josefina Bakhita.</li>
+    <li><strong>Abrir el debate</strong>, invitando a personas expertas en teología, derecho y tecnología a criticar y mejorar este texto.</li>
+  </ol>
+</section>
+
+<section class="bloque" id="firma">
+  <h2>Firma</h2>
+  <p class="datacion">Dado el 11 de noviembre de 2026, fiesta de san Martín de Tours, que partió su capa para abrigar a quien no tenía con qué.</p>
+  <p class="firma-nombre">Mario Jatiya</p>
+</section>
+
+<section class="bloque referencias" id="referencias">
+  <h2>Referencias</h2>
+  <ul class="lista-simple">
+    <li>León XIII, <cite>Rerum Novarum</cite> (1891).</li>
+    <li>Juan Pablo II, <cite>Laborem Exercens</cite> (1981).</li>
+    <li>Pontificio Consejo Justicia y Paz, <cite>Compendio de la Doctrina Social de la Iglesia</cite> (2004).</li>
+    <li><cite>Catecismo de la Iglesia Católica</cite>, n.º 2241.</li>
+    <li>Francisco, Mensaje para la Jornada Mundial del Migrante y del Refugiado 2018 (acoger, proteger, promover, integrar).</li>
+    <li>Academia Pontificia para la Vida y otros firmantes, <cite lang="en">Rome Call for AI Ethics</cite> (2020).</li>
+    <li>Dicasterio para la Doctrina de la Fe y Dicasterio para la Cultura y la Educación, <cite>Antiqua et Nova</cite> (2025).</li>
+    <li>León XIV, discurso al Colegio Cardenalicio (10 de mayo de 2025).</li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="pie bloque">
+  <div>
+    <p>Manifiesto del TecnoCatolicismo · <time datetime="2026-11-11">11 de noviembre de 2026</time></p>
+    <p>© 2026 Mario Jatiya · <a href="#inicio">Volver al principio</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
