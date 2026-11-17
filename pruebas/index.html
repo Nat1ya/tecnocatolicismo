@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pruebas de fecha · Manifiesto del TecnoCatolicismo</title>
+<meta name="description" content="Copias archivadas y sellos de tiempo de cada versión publicada del Manifiesto del TecnoCatolicismo, con los pasos para comprobarlos.">
+<meta name="author" content="Mario Jatiya">
+<link rel="canonical" href="https://tecnocatolicismo.org/pruebas/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfaf6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151412">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+:root {
+  --papel: #fbfaf6;
+  --superficie: #f3f0e9;
+  --tinta: #1e1c19;
+  --tenue: #6b665e;
+  --linea: #e3ded4;
+  --acento: #8c2f25;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papel: #151412;
+    --superficie: #1d1b18;
+    --tinta: #e9e5dd;
+    --tenue: #a39d92;
+    --linea: #2f2c27;
+    --acento: #dc9584;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", P052, "Book Antiqua", Charter, Georgia, serif;
+  font-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem);
+  line-height: 1.62;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+
+/* Rejilla: columna de lectura centrada con gutter mínimo de 16 px */
+.bloque {
+  display: grid;
+  grid-template-columns: minmax(16px, 1fr) minmax(0, 34em) minmax(16px, 1fr);
+}
+.bloque > * { grid-column: 2; }
+.bloque > .ancho { grid-column: 1 / -1; justify-self: center; width: min(100% - 32px, 46em); }
+
+p, li { text-wrap: pretty; }
+h1, h2 { font-weight: 400; text-wrap: balance; }
+strong { font-weight: 700; }
+cite { font-style: italic; }
+
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: var(--acento);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+a:hover { color: var(--acento); }
+a:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; border-radius: 2px; }
+::selection { background: color-mix(in srgb, var(--acento) 22%, transparent); }
+
+.versalitas {
+  font-variant-caps: all-small-caps;
+  font-variant-numeric: lining-nums;
+  letter-spacing: 0.07em;
+  color: var(--tenue);
+}
+
+/* Cabecera */
+.cabecera { padding-top: clamp(3.5rem, 11vw, 8rem); }
+.marca { width: 2.25rem; height: 2.25rem; color: var(--acento); margin-bottom: 2rem; }
+h1 {
+  font-size: clamp(2.5rem, 1.6rem + 4.2vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.022em;
+  margin: 0;
+}
+.autor { margin: 1.5rem 0 0; font-size: 1.2em; font-style: italic; }
+.datos { margin: 0.35rem 0 0; font-size: 0.95em; }
+.datos time { white-space: nowrap; }
+.lema {
+  font-size: clamp(1.4rem, 1.15rem + 1.1vw, 1.95rem);
+  font-style: italic;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin: clamp(2.5rem, 7vw, 4rem) 0 0;
+  padding-top: clamp(2rem, 5vw, 2.75rem);
+  border-top: 1px solid var(--linea);
+}
+.entradilla { margin: 1.25rem 0 0; color: var(--tenue); }
+
+/* Índice */
+.indice { margin-top: clamp(3rem, 8vw, 5rem); }
+.indice h2 { font-size: 1em; margin: 0 0 0.75rem; }
+.indice ol { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--linea); }
+.indice li { border-bottom: 1px solid var(--linea); }
+.indice a { display: block; padding: 0.6rem 0; text-decoration: none; }
+.indice a:hover { color: var(--acento); }
+@media (min-width: 46em) {
+  .indice ol { columns: 2; column-gap: 2.5rem; border-top: 0; }
+  .indice li { break-inside: avoid; }
+}
+
+/* Secciones */
+section { margin-top: clamp(4rem, 10vw, 6.5rem); scroll-margin-top: 1.5rem; }
+section > h2 {
+  font-size: clamp(1.65rem, 1.3rem + 1.5vw, 2.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0 0 1.5rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--linea);
+}
+.pilar-num {
+  display: block;
+  font-size: 0.5em;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.09em;
+  color: var(--acento);
+  margin-bottom: 0.5rem;
+}
+section p { margin: 0 0 1.15em; }
+.divisa { font-size: 1.12em; line-height: 1.45; }
+
+blockquote {
+  margin: 1.5rem 0 2rem;
+  padding: 0.15rem 0 0.15rem 1.25rem;
+  border-left: 2px solid var(--acento);
+  font-size: 1.12em;
+  font-style: italic;
+}
+blockquote p { margin: 0; }
+.cita-ref { font-style: normal; color: var(--tenue); white-space: nowrap; }
+
+/* Listas de compromisos */
+.compromisos { list-style: none; counter-reset: n; margin: 2rem 0 2.25rem; padding: 0; }
+.compromisos > li {
+  counter-increment: n;
+  position: relative;
+  padding-left: 2.1em;
+  margin-bottom: 1.1em;
+}
+.compromisos > li::before {
+  content: counter(n);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  color: var(--acento);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.lista-simple { margin: 1.5rem 0; padding-left: 1.2em; }
+.lista-simple > li { margin-bottom: 0.9em; padding-left: 0.3em; }
+.lista-simple > li::marker { color: var(--acento); }
+
+/* Tabla de los tres pilares */
+.pilares { border-collapse: collapse; font-size: 0.88em; line-height: 1.45; margin: 1.5rem 0 0.5rem; }
+.pilares th, .pilares td { text-align: left; vertical-align: top; padding: 0.9rem 1.1rem 0.9rem 0; border-bottom: 1px solid var(--linea); }
+.pilares th:last-child, .pilares td:last-child { padding-right: 0; }
+.pilares thead th {
+  font-weight: 400;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.07em;
+  color: var(--tenue);
+  border-bottom-color: var(--tinta);
+  padding-top: 0;
+}
+.pilares td:nth-child(2) { font-weight: 700; }
+@media (max-width: 40em) {
+  .pilares thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .pilares, .pilares tbody, .pilares tr, .pilares td { display: block; }
+  .pilares { border-top: 1px solid var(--tinta); }
+  .pilares tr { display: flex; flex-direction: column; padding: 1.25rem 0; border-bottom: 1px solid var(--linea); }
+  .pilares td { border: 0; padding: 0 0 0.6rem; }
+  .pilares td:last-child { padding-bottom: 0; }
+  .pilares td::before {
+    content: attr(data-label);
+    display: block;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.07em;
+    color: var(--tenue);
+    font-size: 0.92em;
+  }
+  .pilares td:nth-child(2) { order: -1; font-size: 1.18em; padding-bottom: 0.75rem; }
+  .pilares td:nth-child(2)::before { content: none; }
+}
+
+/* Firma */
+.datacion { font-style: italic; }
+.firma-nombre {
+  font-size: 1.55em;
+  font-style: italic;
+  margin-top: 2.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--tinta);
+  width: fit-content;
+  min-width: 12rem;
+}
+.sellado { margin: 1.5rem 0 0; font-size: 0.85em; color: var(--tenue); }
+
+.referencias .lista-simple { font-size: 0.92em; }
+
+/* Pie */
+.pie { margin-top: clamp(4rem, 10vw, 6.5rem); padding-bottom: 3rem; }
+.pie > div { font-size: 0.85em; border-top: 1px solid var(--linea); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; }
+.pie p { margin: 0; }
+
+@media print {
+  :root { --papel: #fff; --superficie: #fff; --tinta: #000; --tenue: #333; --linea: #bbb; --acento: #000; }
+  body { font-size: 11pt; }
+  .indice { display: none; }
+  section { break-inside: auto; margin-top: 2rem; }
+  section > h2 { break-after: avoid; }
+  a { text-decoration: none; }
+}
+
+/* Página de pruebas */
+.volver { justify-self: start; display: block; line-height: 0; }
+.version { margin-top: 2.75rem; }
+.version h3 { font-size: 1.2em; font-weight: 400; margin: 0 0 0.35rem; }
+.version h3 .versalitas { display: block; font-size: 0.8em; }
+.version dl { margin: 1rem 0 0; font-size: 0.92em; }
+.version dt { font-variant-caps: all-small-caps; letter-spacing: 0.07em; color: var(--tenue); margin-top: 0.7rem; }
+.version dd { margin: 0; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.84em; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+
+<header class="cabecera bloque" id="inicio">
+  <a class="volver" href="/" aria-label="Volver al manifiesto"><svg class="marca" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 12Q32 17 54 12L54 24Q38 20 35 21Q35.5 44 39 54L25 54Q28.5 44 29 21Q26 20 10 24Z"/></svg></a>
+  <h1>Pruebas de fecha</h1>
+  <p class="datos versalitas"><a href="/">Manifiesto del TecnoCatolicismo</a></p>
+  <p class="entradilla">Cada versión publicada del manifiesto queda archivada por un tercero y sellada con fecha. Aquí están las pruebas, para que cualquiera pueda comprobarlas por su cuenta.</p>
+</header>
+
+<main>
+
+<section class="bloque" id="que-prueban">
+  <h2>Qué prueban y qué no</h2>
+  <p>Prueban dos cosas: que el texto de cada versión existía en la fecha indicada y que no se ha cambiado desde entonces.</p>
+  <p>No prueban quién lo escribió. Un sello de tiempo dice cuándo existía un texto, no de quién es.</p>
+  <p>Tampoco prueban una fecha anterior a la del sello. El manifiesto se firmó el 11 de noviembre de 2026 y se publicó el 12; la primera copia archivada y el primer sello son del 13. De ese 11 de noviembre consta el registro del dominio tecnocatolicismo.org, a las 22:11 UTC, un dato que cualquiera puede consultar en el registro público de dominios (WHOIS).</p>
+</section>
+
+<section class="bloque" id="como-se-sella">
+  <h2>Cómo se sella cada versión</h2>
+  <ol class="compromisos" role="list">
+    <li><strong>Copia archivada.</strong> Internet Archive, una entidad ajena a este proyecto, guarda la página en su Wayback Machine con la fecha y la hora de la captura.</li>
+    <li><strong>Huella.</strong> De la página se calcula su huella SHA-256: una cifra que cambia por completo si se toca una sola letra.</li>
+    <li><strong>Sello de tiempo.</strong> La huella se ancla en la cadena de bloques de Bitcoin con OpenTimestamps. Un bloque ya minado no se puede reescribir, así que la fecha queda fijada.</li>
+  </ol>
+</section>
+
+<section class="bloque" id="versiones">
+  <h2>Versiones</h2>
+  <p>Las horas van en tiempo universal (UTC). En la España peninsular es una hora más.</p>
+  <article class="version">
+    <h3><span class="versalitas">Versión 1</span> <time datetime="2026-11-12">12 de noviembre de 2026</time></h3>
+    <p>Primera publicación del manifiesto, firmado el 11 de noviembre.</p>
+    <dl>
+      <dt>Copia archivada</dt>
+      <dd><a href="https://web.archive.org/web/20261113121131/https://tecnocatolicismo.org/">Wayback Machine, 13 de noviembre de 2026, 12:11 UTC</a></dd>
+      <dt>Huella SHA-256</dt>
+      <dd><code>25cedad77a895713a66a17d70856825bebcdb9048fb9d4466efd1ac69280ef5d</code></dd>
+      <dt>Sello de tiempo</dt>
+      <dd>Bloques de Bitcoin 975675, 975676 y 975705</dd>
+      <dt>Ficheros</dt>
+      <dd><a href="web-publicada-2026-11-12.html" download>Copia exacta</a> · <a href="web-publicada-2026-11-12.html.ots" download>Sello (.ots)</a></dd>
+    </dl>
+  </article>
+  <article class="version">
+    <h3><span class="versalitas">Versión 2</span> <time datetime="2026-11-16">16 de noviembre de 2026</time></h3>
+    <p>Se añade la declaración de fundación.</p>
+    <dl>
+      <dt>Copia archivada</dt>
+      <dd><a href="https://web.archive.org/web/20261115233618/https://tecnocatolicismo.org/">Wayback Machine, 15 de noviembre de 2026, 23:36 UTC (ya 16 de noviembre en España)</a></dd>
+      <dt>Huella SHA-256</dt>
+      <dd><code>9447e1b9376dc7ed83e5317591c2e4d2809599d86efb63434b3b85e1fb7ca8dd</code></dd>
+      <dt>Sello de tiempo</dt>
+      <dd>Bloques de Bitcoin 976032, 976052 y 976057</dd>
+      <dt>Ficheros</dt>
+      <dd><a href="web-publicada-2026-11-16.html" download>Copia exacta</a> · <a href="web-publicada-2026-11-16.html.ots" download>Sello (.ots)</a></dd>
+    </dl>
+  </article>
+  <article class="version">
+    <h3><span class="versalitas">Versión 3</span> <time datetime="2026-11-16">16 de noviembre de 2026</time></h3>
+    <p>Se añaden «Un deber de generación» y «Un cortafuegos para la democracia».</p>
+    <dl>
+      <dt>Copia archivada</dt>
+      <dd><a href="https://web.archive.org/web/20261116134548/https://tecnocatolicismo.org/">Wayback Machine, 16 de noviembre de 2026, 13:45 UTC</a></dd>
+      <dt>Huella SHA-256</dt>
+      <dd><code>b737be6d2ac6663cefe0f94fbe7eaa19c2694e155d8d3abd9e19bff1aa2e0c4c</code></dd>
+      <dt>Sello de tiempo</dt>
+      <dd>Bloques de Bitcoin 976141, 976145, 976167 y 976170</dd>
+      <dt>Ficheros</dt>
+      <dd><a href="web-publicada-2026-11-16-1444.html" download>Copia exacta</a> · <a href="web-publicada-2026-11-16-1444.html.ots" download>Sello (.ots)</a></dd>
+    </dl>
+  </article>
+  <article class="version">
+    <h3><span class="versalitas">Versión 4</span> <time datetime="2026-11-17">17 de noviembre de 2026</time></h3>
+    <p>Se añade «Custodiar la memoria».</p>
+    <dl>
+      <dt>Copia archivada</dt>
+      <dd><a href="https://web.archive.org/web/20261117084412/https://tecnocatolicismo.org/">Wayback Machine, 17 de noviembre de 2026, 08:44 UTC</a></dd>
+      <dt>Huella SHA-256</dt>
+      <dd><code>0cb20d9a8028a1682bec3d966fcef9e0e6620edff5db4f5c5b8d822b7d26fa00</code></dd>
+      <dt>Sello de tiempo</dt>
+      <dd>Enviado. Pendiente de entrar en un bloque de Bitcoin.</dd>
+      <dt>Ficheros</dt>
+      <dd><a href="web-publicada-2026-11-17-0942.html" download>Copia exacta</a> · <a href="web-publicada-2026-11-17-0942.html.ots" download>Sello (.ots)</a></dd>
+    </dl>
+  </article>
+</section>
+
+<section class="bloque" id="como-comprobarlo">
+  <h2>Cómo comprobarlo</h2>
+  <ol class="compromisos" role="list">
+    <li><strong>Descarga</strong> la copia exacta de la versión y su sello, el fichero que termina en <code>.ots</code>.</li>
+    <li><strong>Abre</strong> <a href="https://opentimestamps.org">opentimestamps.org</a> y arrastra el sello a la página. Cuando lo pida, arrastra también la copia.</li>
+    <li><strong>Lee el resultado.</strong> La página indica el bloque de Bitcoin que contiene la huella y la fecha de ese bloque.</li>
+  </ol>
+  <p>La copia de Wayback Machine se abre con su enlace: es la misma página, guardada por Internet Archive.</p>
+  <p>El sello de la versión más reciente tarda unas horas en entrar en un bloque. Hasta entonces figura como pendiente.</p>
+  <p class="datacion">Esta página se actualiza con cada versión y no forma parte del texto sellado.</p>
+</section>
+
+</main>
+
+<footer class="pie bloque">
+  <div>
+    <p>Pruebas de fecha · Manifiesto del TecnoCatolicismo</p>
+    <p>© 2026 Mario Jatiya · <a href="/">Volver al manifiesto</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
